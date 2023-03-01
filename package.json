@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Small project for learning advanced css and sass",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrWalt/natours.git"
+  },
+  "author": "MrWalt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrWalt/natours/issues"
+  },
+  "homepage": "https://github.com/MrWalt/natours#readme",
+  "dependencies": {
+    "parcel": "^2.8.3"
+  }
+}
