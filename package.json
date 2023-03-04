@@ -17,7 +17,8 @@
     "url": "https://github.com/MrWalt/natours/issues"
   },
   "homepage": "https://github.com/MrWalt/natours#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3"
   }
 }
