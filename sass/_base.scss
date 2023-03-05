@@ -1,0 +1,38 @@
+// VARIABLES
+// =================================
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-light-1: #f7f7f7;
+
+$color-text-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+
+$gap-horizontal: 6rem;
+$gap-vertical: 8rem;
+$grid-width: 114rem;
+// =================================
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-text-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+}
