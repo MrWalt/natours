@@ -20,35 +20,6 @@
   }
 }
 
-.heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  background-image: linear-gradient(
-    to right,
-    $color-primary-light,
-    $color-primary-dark
-  );
-  display: inline-block;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: 2px;
-  transition: all 0.2s ease-in;
-  cursor: default;
-
-  &:hover {
-    transform: skewX(-15deg) scale(1.05);
-    text-shadow: 0.4rem 0.8rem 1.6rem rgba($color-black, 0.08);
-  }
-}
-
-.heading-tertiary {
-  font-size: $font-default;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 .grid-text {
   font-size: $font-default;
 
