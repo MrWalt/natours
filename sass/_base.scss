@@ -13,6 +13,8 @@ $color-black: #000;
 $gap-horizontal: 6rem;
 $gap-vertical: 8rem;
 $grid-width: 114rem;
+
+$font-default: 1.6rem;
 // =================================
 
 *,
@@ -30,9 +32,16 @@ html {
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
   color: $color-text-dark;
   padding: 3rem;
   box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.center-text {
+  text-align: center;
 }
