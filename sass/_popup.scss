@@ -1,6 +1,3 @@
-@mixin absCenter {
-}
-
 @mixin imgFix($url) {
   background-image: url($url);
   background-size: cover;

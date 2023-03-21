@@ -1,3 +1,31 @@
+// MIXIN
+// =================================
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-portrait {
+    @media (max-width: 56em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-landscape {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == small-desktop {
+    @media (min-width: 112em) {
+      @content;
+    }
+  }
+}
+
 // VARIABLES
 // =================================
 $color-primary: #55c57a;
@@ -37,6 +65,10 @@ $font-default: 1.6rem;
 
 html {
   font-size: 62.5%;
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
 }
 
 body {
