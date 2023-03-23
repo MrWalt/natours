@@ -2,7 +2,7 @@
 // =================================
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 37em) {
+    @media (max-width: 34em) {
       @content;
     }
   }
@@ -20,7 +20,7 @@
   }
 
   @if $breakpoint == small-desktop {
-    @media (min-width: 112em) {
+    @media (max-width: 85em) {
       @content;
     }
   }
@@ -64,11 +64,19 @@ $font-default: 1.6rem;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 10px
 
-  @include respond(phone) {
+  @include respond(tab-landscape) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-portrait) {
     font-size: 50%;
   }
+
+  // @include respond(small-desktop) {
+  //   font-size: 75%;
+  // }
 }
 
 body {
@@ -78,10 +86,19 @@ body {
   color: $color-text-dark;
   padding: 3rem;
   box-sizing: border-box;
+
+  @include respond(tab-portrait) {
+    padding: 0;
+  }
 }
 
 .container {
   margin: 0 auto;
+  // max-width: $grid-width;
+
+  // @include respond(small-desktop) {
+  //   max-width: 104rem;
+  // }
 }
 
 .center-text {

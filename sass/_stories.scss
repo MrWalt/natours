@@ -3,6 +3,10 @@
   position: relative;
   overflow: hidden;
 
+  @include respond(tab-portrait) {
+    padding: 10rem 0;
+  }
+
   .heading-secondary {
     margin-bottom: 8rem;
   }

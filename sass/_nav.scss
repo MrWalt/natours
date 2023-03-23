@@ -21,6 +21,11 @@
     box-shadow: 0 0rem 2rem rgba($color-black, 0.06);
     text-align: center;
     cursor: pointer;
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -34,10 +39,15 @@
       $color-primary-light,
       $color-primary-dark
     );
-    z-index: 999;
+    z-index: 1000;
     transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
     // transform: scale(80);
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
@@ -47,7 +57,9 @@
     right: 0;
     z-index: 1000;
     opacity: 0;
-    width: 0;
+    pointer-events: none;
+    visibility: hidden;
+    width: 0%;
     transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   }
 
@@ -56,6 +68,7 @@
     @include centerAbs;
     list-style: none;
     text-align: center;
+    width: 100rem;
   }
 
   &__item {
@@ -101,6 +114,8 @@
 
   &__checkbox:checked ~ &__nav {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     width: 100%;
   }
 

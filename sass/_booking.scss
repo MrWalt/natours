@@ -6,8 +6,12 @@
     $color-primary-dark
   );
 
+  @include respond(tab-portrait) {
+    padding: 10rem 0;
+  }
+
   .book-box {
-    width: $grid-width;
+    max-width: $grid-width;
     margin: 0 auto;
   }
 
