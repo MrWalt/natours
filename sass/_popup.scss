@@ -63,6 +63,18 @@
     overflow: hidden;
     opacity: 0;
     transition: all 0.4s 0.2s;
+
+    @include respond(small-desktop) {
+      width: 90%;
+    }
+
+    @include respond(tab-portrait) {
+      grid-template-columns: 1fr;
+    }
+
+    @include respond(phone) {
+      height: auto;
+    }
   }
 
   &:target &__content {
@@ -74,11 +86,24 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+
+    @include respond(tab-portrait) {
+      flex-direction: row;
+      grid-row: 2 / -1;
+    }
   }
 
   &__right {
     margin: auto 0;
     padding: 3.6rem 7.2rem;
+
+    @include respond(tab-landscape) {
+      padding: 2.4rem 4.8rem;
+    }
+
+    @include respond(phone) {
+      padding: 1.8rem 3.6rem 4.8rem 3.6rem;
+    }
   }
 
   &__img {
@@ -93,6 +118,10 @@
     &--2 {
       @include imgFix("../img/nat-9.jpg");
     }
+
+    @include respond(tab-portrait) {
+      display: none;
+    }
   }
 
   &__text {
@@ -105,6 +134,11 @@
     -ms-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
+
+    @include respond(phone) {
+      margin-bottom: 2.4rem;
+      column-count: 1;
+    }
 
     &::selection {
       background-color: $color-primary;
