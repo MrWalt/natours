@@ -101,6 +101,29 @@
           <div class="grid-image-container">
             <div class="image-box">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56em) 27vw, (max-width: 34em) 35vw, 270px"
+                alt="Image of nature"
+                class="image-box-image image-box-image--1"
+                src="img/nat-1-large.jpg"
+              />
+
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56em) 27vw, (max-width: 34em) 35vw, 270px"
+                alt="Image of nature"
+                class="image-box-image image-box-image--2"
+                src="img/nat-2-large.jpg"
+              />
+
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56em) 27vw, (max-width: 34em) 35vw, 270px"
+                alt="Image of nature"
+                class="image-box-image image-box-image--3"
+                src="img/nat-3-large.jpg"
+              />
+              <!-- <img
                 src="img/nat-1-large.jpg"
                 alt="Image of nature"
                 class="image-box-image image-box-image--1"
@@ -114,7 +137,7 @@
                 src="img/nat-3-large.jpg"
                 alt="Image of nature"
                 class="image-box-image image-box-image--3"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -340,7 +363,7 @@
         <div class="book-box">
           <div class="book">
             <div class="book__form">
-              <form action="#" class="form">
+              <form action="#" class="form" name="signup" method="POST" netlify>
                 <h2 class="heading-secondary">Start booking now</h2>
                 <!-- NAME INPUT -->
                 <div class="form__group">
@@ -407,12 +430,22 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__logo-box">
-          <img
-            draggable="false"
-            src="img/logo-green-2x.png"
-            alt="Full logo"
-            class="footer__logo"
-          />
+          <picture class="footer__logo">
+            <source
+              srcset="
+                img/logo-green-small-1x.png 1x,
+                img/logo-green-small-2x.png 2x
+              "
+              media="(max-width: 34em)"
+            />
+            <img
+              draggable="false"
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="Full logo"
+              class="footer__logo"
+              src="img/logo-green-1x.png"
+            />
+          </picture>
         </div>
         <div class="footer__navigation">
           <ul class="footer__list">
@@ -439,7 +472,7 @@
               target="_blank"
               href="https://github.com/MrWalt"
               >Mihael Krstevski</a
-            >.
+            >
           </p>
         </div>
       </div>

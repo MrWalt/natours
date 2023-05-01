@@ -48,11 +48,15 @@
     gap: 1.6rem;
     border-top: 1px solid $color-text-dark;
     padding-top: 2rem;
-    width: 40%;
+    width: 44rem;
 
     @include respond(tab-portrait) {
       flex-direction: column;
       text-align: center;
+    }
+
+    @include respond(tab-portrait) {
+      width: 50%;
     }
   }
 
@@ -60,7 +64,11 @@
     border-top: 1px solid $color-text-dark;
     padding-top: 2rem;
     color: $color-grey-light-1;
-    width: 40%;
+    width: 44rem;
+
+    @include respond(tab-portrait) {
+      width: 50%;
+    }
   }
 
   &__link {

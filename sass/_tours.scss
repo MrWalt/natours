@@ -44,6 +44,7 @@
     font-size: 2rem;
     transition: all 0.8s ease;
     position: relative;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
 
@@ -189,6 +190,10 @@
 
     &__text {
       padding: 3rem;
+
+      @include respond(tab-landscape) {
+        padding: 0.8rem 1.6rem;
+      }
 
       @include respond(tab-portrait) {
         padding: 0.8rem 2.4rem;
