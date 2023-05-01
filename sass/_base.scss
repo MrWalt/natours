@@ -2,25 +2,25 @@
 // =================================
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 34em) {
+    @media only screen and (max-width: 34em) {
       @content;
     }
   }
 
   @if $breakpoint == tab-portrait {
-    @media (max-width: 56em) {
+    @media only screen and (max-width: 56em) {
       @content;
     }
   }
 
   @if $breakpoint == tab-landscape {
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content;
     }
   }
 
   @if $breakpoint == small-desktop {
-    @media (max-width: 85em) {
+    @media only screen and (max-width: 85em) {
       @content;
     }
   }
@@ -103,4 +103,9 @@ body {
 
 .center-text {
   text-align: center;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }
